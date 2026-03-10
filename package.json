@@ -1,0 +1,36 @@
+{
+  "name": "nexus-vpn",
+  "version": "1.0.0",
+  "description": "NEXUS VPN - A full-featured VPN management application with WireGuard integration and web dashboard",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "jest --forceExit --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhkiller350/NEXUS-VPN.git"
+  },
+  "keywords": ["vpn", "wireguard", "dashboard", "network"],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dhkiller350/NEXUS-VPN/issues"
+  },
+  "homepage": "https://github.com/dhkiller350/NEXUS-VPN#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.6.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  }
+}

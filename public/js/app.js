@@ -19,7 +19,7 @@ const App = {
     if (API.token) {
       this.loadDashboard();
     } else {
-      this.showAuth();
+      this.showLanding();
     }
   },
 
@@ -27,6 +27,55 @@ const App = {
    * Bind all event listeners.
    */
   bindEvents() {
+    // Landing page buttons
+    document.getElementById('nav-login-btn').addEventListener('click', () => {
+      this.showAuth('login');
+    });
+    document.getElementById('nav-signup-btn').addEventListener('click', () => {
+      this.showAuth('register');
+    });
+    document.getElementById('hero-signup-btn').addEventListener('click', () => {
+      this.showAuth('register');
+    });
+    document.getElementById('hero-learn-btn').addEventListener('click', () => {
+      document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('pricing-free-btn').addEventListener('click', () => {
+      this.showAuth('register');
+    });
+    document.getElementById('pricing-pro-btn').addEventListener('click', () => {
+      this.showAuth('register');
+    });
+    document.getElementById('pricing-enterprise-btn').addEventListener('click', () => {
+      this.showAuth('register');
+    });
+
+    // Auth back button
+    document.getElementById('auth-back-btn').addEventListener('click', (e) => {
+      e.preventDefault();
+      this.showLanding();
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('header-nav').classList.toggle('open');
+    });
+
+    // Sticky header scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (header) {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+      }
+    });
+
+    // Close mobile menu on nav link click
+    document.querySelectorAll('.header-nav a').forEach((link) => {
+      link.addEventListener('click', () => {
+        document.getElementById('header-nav').classList.remove('open');
+      });
+    });
+
     // Auth forms
     document.getElementById('login-form').addEventListener('submit', (e) => {
       e.preventDefault();
@@ -81,12 +130,31 @@ const App = {
     });
   },
 
-  // ===== AUTH =====
+  // ===== SCREENS =====
 
-  showAuth() {
+  showLanding() {
+    document.getElementById('landing-screen').classList.add('active');
+    document.getElementById('auth-screen').classList.remove('active');
+    document.getElementById('dashboard-screen').classList.remove('active');
+    window.scrollTo(0, 0);
+  },
+
+  showAuth(form) {
+    document.getElementById('landing-screen').classList.remove('active');
     document.getElementById('auth-screen').classList.add('active');
     document.getElementById('dashboard-screen').classList.remove('active');
+    document.getElementById('auth-error').textContent = '';
+
+    if (form === 'register') {
+      document.getElementById('login-form').classList.remove('active');
+      document.getElementById('register-form').classList.add('active');
+    } else {
+      document.getElementById('register-form').classList.remove('active');
+      document.getElementById('login-form').classList.add('active');
+    }
   },
+
+  // ===== AUTH =====
 
   async handleLogin() {
     const username = document.getElementById('login-username').value;
@@ -124,15 +192,18 @@ const App = {
   handleLogout() {
     API.setToken(null);
     this.state = { connected: false, currentServer: null, servers: [], user: null };
-    document.getElementById('auth-screen').classList.add('active');
+    document.getElementById('landing-screen').classList.add('active');
+    document.getElementById('auth-screen').classList.remove('active');
     document.getElementById('dashboard-screen').classList.remove('active');
     document.getElementById('login-form').classList.add('active');
     document.getElementById('register-form').classList.remove('active');
+    window.scrollTo(0, 0);
   },
 
   // ===== DASHBOARD =====
 
   async loadDashboard() {
+    document.getElementById('landing-screen').classList.remove('active');
     document.getElementById('auth-screen').classList.remove('active');
     document.getElementById('dashboard-screen').classList.add('active');
 

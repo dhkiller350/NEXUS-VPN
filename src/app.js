@@ -3,6 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 const path = require('path');
 
 const authRoutes = require('./routes/auth');
@@ -28,14 +29,31 @@ function createApp() {
   app.use(cors());
   app.use(express.json());
 
+  // Rate limiting
+  const authLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 20,
+    message: { error: 'Too many requests, please try again later' },
+    standardHeaders: true,
+    legacyHeaders: false,
+  });
+
+  const apiLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    message: { error: 'Too many requests, please try again later' },
+    standardHeaders: true,
+    legacyHeaders: false,
+  });
+
   // Serve static frontend files
   app.use(express.static(path.join(__dirname, '..', 'public')));
 
   // API routes
-  app.use('/api/auth', authRoutes);
-  app.use('/api/servers', serverRoutes);
-  app.use('/api/connections', connectionRoutes);
-  app.use('/api/settings', settingsRoutes);
+  app.use('/api/auth', authLimiter, authRoutes);
+  app.use('/api/servers', apiLimiter, serverRoutes);
+  app.use('/api/connections', apiLimiter, connectionRoutes);
+  app.use('/api/settings', apiLimiter, settingsRoutes);
 
   // Health check
   app.get('/api/health', (req, res) => {

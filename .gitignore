@@ -1,5 +1,7 @@
 # NEXUS VPN
 nexus-vpn.db
+nexus-vpn.db-shm
+nexus-vpn.db-wal
 tests/test-nexus.db
 
 ## Ignore Visual Studio temporary files, build results, and

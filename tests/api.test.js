@@ -3,17 +3,23 @@
 const request = require('supertest');
 const path = require('path');
 const fs = require('fs');
-const { createApp } = require('../src/app');
-const { closeDb } = require('../src/database');
 
-// Use a temp DB for tests
+// Set env vars BEFORE requiring app modules so database.js reads the correct path
 const TEST_DB = path.join(__dirname, 'test-nexus.db');
 process.env.DB_PATH = TEST_DB;
 process.env.JWT_SECRET = 'test-secret-key';
 
+const { createApp } = require('../src/app');
+const { closeDb } = require('../src/database');
+
 let app;
 
 beforeAll(() => {
+  // Clean up any leftover test DB from previous runs
+  closeDb();
+  if (fs.existsSync(TEST_DB)) {
+    fs.unlinkSync(TEST_DB);
+  }
   app = createApp();
 });
 

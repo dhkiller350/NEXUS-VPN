@@ -113,7 +113,6 @@ PersistentKeepalive = 25
  */
 function getSimulatedStats(peerId) {
   const now = Date.now();
-  const hash = crypto.createHash('md5').update(peerId + String(now)).digest();
   return {
     bytesReceived: Math.floor(Math.random() * 100000000),
     bytesSent: Math.floor(Math.random() * 50000000),

@@ -66,7 +66,7 @@ function createApp() {
   });
 
   // SPA fallback - serve index.html for non-API routes
-  app.get('/{*splat}', (req, res) => {
+  app.get('/{*splat}', apiLimiter, (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
   });
 

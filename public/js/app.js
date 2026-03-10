@@ -316,14 +316,25 @@ const App = {
           </div>
           <div class="server-actions">
             ${isCurrentServer
-              ? `<button class="btn btn-danger btn-sm" onclick="App.disconnectFromServer()">Disconnect</button>`
-              : `<button class="btn btn-primary btn-sm" onclick="App.connectToServer('${s.id}')">Connect</button>`
+              ? `<button class="btn btn-danger btn-sm" data-action="disconnect">Disconnect</button>`
+              : `<button class="btn btn-primary btn-sm" data-action="connect" data-server="${s.id}">Connect</button>`
             }
-            <button class="btn btn-ghost btn-sm" onclick="App.downloadConfig('${s.id}')">Config</button>
+            <button class="btn btn-ghost btn-sm" data-action="config" data-server="${s.id}">Config</button>
           </div>
         </div>
       `;
     }).join('');
+
+    // Bind server action buttons via event delegation
+    container.querySelectorAll('[data-action]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const action = e.currentTarget.dataset.action;
+        const serverId = e.currentTarget.dataset.server;
+        if (action === 'connect') this.connectToServer(serverId);
+        else if (action === 'disconnect') this.disconnectFromServer();
+        else if (action === 'config') this.downloadConfig(serverId);
+      });
+    });
   },
 
   filterServers(query) {

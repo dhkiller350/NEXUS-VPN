@@ -27,27 +27,14 @@ const App = {
    * Bind all event listeners.
    */
   bindEvents() {
-    // Landing page buttons
-    document.getElementById('nav-login-btn').addEventListener('click', () => {
-      this.showAuth('login');
-    });
-    document.getElementById('nav-signup-btn').addEventListener('click', () => {
-      this.showAuth('register');
-    });
-    document.getElementById('hero-signup-btn').addEventListener('click', () => {
-      this.showAuth('register');
+    // Landing page buttons — use data attributes to reduce duplication
+    document.querySelectorAll('[data-auth-action]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        this.showAuth(btn.dataset.authAction);
+      });
     });
     document.getElementById('hero-learn-btn').addEventListener('click', () => {
       document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-    });
-    document.getElementById('pricing-free-btn').addEventListener('click', () => {
-      this.showAuth('register');
-    });
-    document.getElementById('pricing-pro-btn').addEventListener('click', () => {
-      this.showAuth('register');
-    });
-    document.getElementById('pricing-enterprise-btn').addEventListener('click', () => {
-      this.showAuth('register');
     });
 
     // Auth back button
@@ -69,11 +56,11 @@ const App = {
       }
     });
 
-    // Close mobile menu on nav link click
-    document.querySelectorAll('.header-nav a').forEach((link) => {
-      link.addEventListener('click', () => {
+    // Close mobile menu on nav link click (event delegation on parent)
+    document.getElementById('header-nav').addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
         document.getElementById('header-nav').classList.remove('open');
-      });
+      }
     });
 
     // Auth forms

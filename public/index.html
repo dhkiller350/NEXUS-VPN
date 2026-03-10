@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS VPN — Secure. Private. Fast.</title>
+  <meta name="description" content="NEXUS VPN provides military-grade encryption with WireGuard protocol. Browse privately with servers in 8+ countries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- ============ LANDING PAGE ============ -->
+  <div id="landing-screen" class="screen active">
+
+    <!-- Navigation -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="#" class="header-logo" id="nav-logo">
+          <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+            <path d="M24 8L24 40M12 16L36 16M10 24H38M12 32L36 32" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+            <circle cx="24" cy="24" r="8" fill="currentColor" opacity="0.2"/>
+            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+          </svg>
+          <span>NEXUS <em>VPN</em></span>
+        </a>
+        <nav class="header-nav" id="header-nav">
+          <a href="#features">Features</a>
+          <a href="#servers">Servers</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-ghost" id="nav-login-btn" data-auth-action="login">Sign In</button>
+          <button class="btn btn-primary" id="nav-signup-btn" data-auth-action="register">Get Started</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg-effects">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Powered by WireGuard&reg;
+        </div>
+        <h1>Browse the Internet<br><span>Without Boundaries</span></h1>
+        <p class="hero-subtitle">Military-grade encryption. Lightning-fast speeds. Servers in 8+ countries. Take back control of your privacy with NEXUS VPN.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg" id="hero-signup-btn" data-auth-action="register">Get Started Free</button>
+          <button class="btn btn-outline btn-lg" id="hero-learn-btn">Learn More</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value">8+</span>
+            <span class="hero-stat-label">Server Locations</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">0</span>
+            <span class="hero-stat-label">Logs Kept</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">256-bit</span>
+            <span class="hero-stat-label">Encryption</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Features</span>
+          <h2>Everything You Need to Stay Private</h2>
+          <p>NEXUS VPN combines cutting-edge WireGuard technology with an intuitive dashboard for complete protection.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Military-Grade Encryption</h3>
+            <p>256-bit ChaCha20 encryption through WireGuard keeps your data unreadable to anyone — hackers, ISPs, and governments.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Lightning-Fast Speeds</h3>
+            <p>WireGuard protocol delivers up to 3x faster speeds than traditional VPNs. Stream, game, and browse without slowdowns.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Strict No-Logs Policy</h3>
+            <p>We never track, collect, or share your browsing data. Your online activity is yours alone — period.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            </div>
+            <h3>Kill Switch</h3>
+            <p>Automatically blocks all internet traffic if the VPN connection drops, ensuring your real IP is never exposed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h3>Global Server Network</h3>
+            <p>Connect to optimized servers in the US, Europe, Asia, and Australia. Access content from anywhere on earth.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Real-Time Dashboard</h3>
+            <p>Monitor your bandwidth, connection logs, and server status from a beautiful, real-time web dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Server Locations Section -->
+    <section class="section section-dark" id="servers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Global Network</span>
+          <h2>Servers Around the World</h2>
+          <p>Connect to the nearest server for the fastest speeds, or choose a specific country to access geo-restricted content.</p>
+        </div>
+        <div class="locations-grid">
+          <div class="location-card">
+            <span class="location-flag">🇺🇸</span>
+            <h4>United States</h4>
+            <p>New York &amp; Los Angeles</p>
+            <span class="location-badge">2 Servers</span>
+          </div>
+          <div class="location-card">
+            <span class="location-flag">🇩🇪</span>
+            <h4>Germany</h4>
+            <p>Frankfurt</p>
+            <span class="location-badge">1 Server</span>
+          </div>
+          <div class="location-card">
+            <span class="location-flag">🇳🇱</span>
+            <h4>Netherlands</h4>
+            <p>Amsterdam</p>
+            <span class="location-badge">1 Server</span>
+          </div>
+          <div class="location-card">
+            <span class="location-flag">🇯🇵</span>
+            <h4>Japan</h4>
+            <p>Tokyo</p>
+            <span class="location-badge">1 Server</span>
+          </div>
+          <div class="location-card">
+            <span class="location-flag">🇬🇧</span>
+            <h4>United Kingdom</h4>
+            <p>London</p>
+            <span class="location-badge">1 Server</span>
+          </div>
+          <div class="location-card">
+            <span class="location-flag">🇨🇦</span>
+            <h4>Canada</h4>
+            <p>Toronto</p>
+            <span class="location-badge">1 Server</span>
+          </div>
+          <div class="location-card">
+            <span class="location-flag">🇦🇺</span>
+            <h4>Australia</h4>
+            <p>Sydney</p>
+            <span class="location-badge">1 Server</span>
+          </div>
+          <div class="location-card location-card-cta">
+            <span class="location-flag">🌐</span>
+            <h4>More Coming Soon</h4>
+            <p>We're expanding fast</p>
+            <span class="location-badge accent">Stay Tuned</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pricing</span>
+          <h2>Simple, Transparent Pricing</h2>
+          <p>No hidden fees. No bandwidth limits. Just complete privacy.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Free</h3>
+              <div class="pricing-price">
+                <span class="price-amount">$0</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-desc">Get started with basic protection</p>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                1 Device
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                3 Server Locations
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                WireGuard Protocol
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Web Dashboard
+              </li>
+            </ul>
+            <button class="btn btn-outline btn-full" id="pricing-free-btn" data-auth-action="register">Get Started</button>
+          </div>
+          <div class="pricing-card featured">
+            <div class="pricing-popular">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Pro</h3>
+              <div class="pricing-price">
+                <span class="price-amount">$9</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-desc">Full privacy for power users</p>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                5 Devices
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                All Server Locations
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Kill Switch
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Priority Support
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Config File Download
+              </li>
+            </ul>
+            <button class="btn btn-primary btn-full" id="pricing-pro-btn" data-auth-action="register">Get Started</button>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Enterprise</h3>
+              <div class="pricing-price">
+                <span class="price-amount">$29</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-desc">For teams and organizations</p>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited Devices
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated Servers
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Admin Dashboard
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                API Access
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                24/7 Support
+              </li>
+            </ul>
+            <button class="btn btn-outline btn-full" id="pricing-enterprise-btn" data-auth-action="register">Contact Sales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-dark" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">FAQ</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is NEXUS VPN?</summary>
+            <p>NEXUS VPN is a privacy-focused virtual private network service that encrypts your internet connection using the WireGuard protocol. It routes your traffic through secure servers worldwide, hiding your IP address and protecting your data from surveillance.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why WireGuard?</summary>
+            <p>WireGuard is a modern VPN protocol that's significantly faster and more secure than legacy protocols like OpenVPN and IPSec. It has a smaller codebase (making it easier to audit), uses state-of-the-art cryptography, and delivers better performance on both mobile and desktop devices.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you keep any logs?</summary>
+            <p>No. NEXUS VPN operates under a strict no-logs policy. We do not track, monitor, or store any of your browsing activity, connection timestamps, or IP addresses. Your privacy is our top priority.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use NEXUS VPN on multiple devices?</summary>
+            <p>Yes! Depending on your plan, you can connect 1 to unlimited devices simultaneously. You can also download WireGuard configuration files to use with native WireGuard clients on any platform.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is a Kill Switch?</summary>
+            <p>A kill switch is a safety feature that automatically blocks all internet traffic if your VPN connection drops unexpectedly. This prevents your real IP address and unencrypted data from being exposed, even for a split second.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a free trial?</summary>
+            <p>Yes! Our Free plan lets you try NEXUS VPN with 3 server locations at no cost. You can upgrade to Pro or Enterprise at any time to unlock all features and server locations.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="header-logo" id="footer-logo">
+              <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+                <path d="M24 8L24 40M12 16L36 16M10 24H38M12 32L36 32" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                <circle cx="24" cy="24" r="8" fill="currentColor" opacity="0.2"/>
+                <circle cx="24" cy="24" r="4" fill="currentColor"/>
+              </svg>
+              <span>NEXUS <em>VPN</em></span>
+            </a>
+            <p>Protecting your digital life with next-generation VPN technology. Browse freely. Stay private.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#servers">Servers</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="#">Twitter / X</a>
+            <a href="#">GitHub</a>
+            <a href="#">Discord</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 NEXUS VPN. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ============ AUTH SCREEN ============ -->
+  <div id="auth-screen" class="screen">
+    <a href="#" class="auth-back-link" id="auth-back-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    <div class="auth-container">
+      <div class="auth-logo">
+        <div class="logo-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+            <path d="M24 8L24 40M12 16L36 16M10 24H38M12 32L36 32" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+            <circle cx="24" cy="24" r="8" fill="currentColor" opacity="0.2"/>
+            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+          </svg>
+        </div>
+        <h1>NEXUS <span>VPN</span></h1>
+        <p>Secure. Private. Fast.</p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="auth-form active">
+        <h2>Sign In</h2>
+        <div class="form-group">
+          <label for="login-username">Username</label>
+          <input type="text" id="login-username" placeholder="Enter your username" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Enter your password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+        <p class="auth-switch">Don't have an account? <a href="#" id="show-register">Create one</a></p>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" class="auth-form">
+        <h2>Create Account</h2>
+        <div class="form-group">
+          <label for="reg-username">Username</label>
+          <input type="text" id="reg-username" placeholder="Choose a username" required autocomplete="username">
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="Enter your email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" placeholder="Min 8 characters" required minlength="8" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+        <p class="auth-switch">Already have an account? <a href="#" id="show-login">Sign in</a></p>
+      </form>
+
+      <div id="auth-error" class="error-message"></div>
+    </div>
+  </div>
+
+  <!-- Main Dashboard -->
+  <div id="dashboard-screen" class="screen">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-icon small">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="logo-text">NEXUS</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item" data-page="servers">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="6" cy="18" r="1" fill="currentColor"/></svg>
+          <span>Servers</span>
+        </a>
+        <a href="#" class="nav-item" data-page="logs">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Logs</span>
+        </a>
+        <a href="#" class="nav-item" data-page="settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="user-avatar" id="user-avatar">U</div>
+          <span id="sidebar-username">User</span>
+        </div>
+        <button id="logout-btn" class="btn btn-ghost btn-sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard Page -->
+      <div id="page-dashboard" class="page active">
+        <div class="page-header">
+          <h2>Dashboard</h2>
+          <div class="connection-status" id="connection-badge">
+            <span class="status-dot disconnected"></span>
+            <span id="status-text">Disconnected</span>
+          </div>
+        </div>
+
+        <!-- Quick Connect Card -->
+        <div class="connect-card">
+          <div class="connect-info">
+            <div id="connect-server-info">
+              <h3 id="connect-server-name">Not Connected</h3>
+              <p id="connect-server-location">Select a server to connect</p>
+            </div>
+            <div class="connect-ip" id="connect-ip-display" style="display:none">
+              <span class="label">Your IP</span>
+              <span class="value" id="assigned-ip">—</span>
+            </div>
+          </div>
+          <button id="connect-toggle-btn" class="btn-connect" aria-label="Connect">
+            <svg class="power-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18.36 6.64a9 9 0 11-12.73 0"/>
+              <line x1="12" y1="2" x2="12" y2="12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon download">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Downloaded</span>
+              <span class="stat-value" id="stat-downloaded">0 B</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon upload">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Uploaded</span>
+              <span class="stat-value" id="stat-uploaded">0 B</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon total">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Total Bandwidth</span>
+              <span class="stat-value" id="stat-total">0 B</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon sessions">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="stat-info">
+              <span class="stat-label">Sessions</span>
+              <span class="stat-value" id="stat-sessions">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+          </div>
+          <div class="card-body">
+            <div id="recent-activity" class="activity-list">
+              <p class="empty-state">No recent activity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servers Page -->
+      <div id="page-servers" class="page">
+        <div class="page-header">
+          <h2>VPN Servers</h2>
+          <div class="server-filter">
+            <input type="text" id="server-search" placeholder="Search servers..." class="input-search">
+          </div>
+        </div>
+        <div id="server-list" class="server-grid">
+          <p class="empty-state">Loading servers...</p>
+        </div>
+      </div>
+
+      <!-- Logs Page -->
+      <div id="page-logs" class="page">
+        <div class="page-header">
+          <h2>Connection Logs</h2>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div id="logs-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Server</th>
+                    <th>Location</th>
+                    <th>Data Sent</th>
+                    <th>Data Received</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody id="logs-tbody">
+                  <tr><td colspan="6" class="empty-state">No logs yet</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Settings Page -->
+      <div id="page-settings" class="page">
+        <div class="page-header">
+          <h2>Settings</h2>
+        </div>
+
+        <div class="settings-grid">
+          <div class="card">
+            <div class="card-header"><h3>Connection</h3></div>
+            <div class="card-body">
+              <div class="setting-row">
+                <div class="setting-info">
+                  <span class="setting-label">Kill Switch</span>
+                  <span class="setting-desc">Block internet if VPN disconnects</span>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" id="setting-killswitch">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="setting-row">
+                <div class="setting-info">
+                  <span class="setting-label">Auto Connect</span>
+                  <span class="setting-desc">Connect to VPN on startup</span>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" id="setting-autoconnect">
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><h3>DNS Configuration</h3></div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>DNS Servers</label>
+                <select id="setting-dns" class="form-select">
+                  <option value="1.1.1.1, 1.0.0.1">Cloudflare (1.1.1.1)</option>
+                  <option value="8.8.8.8, 8.8.4.4">Google (8.8.8.8)</option>
+                  <option value="9.9.9.9, 149.112.112.112">Quad9 (9.9.9.9)</option>
+                  <option value="208.67.222.222, 208.67.220.220">OpenDNS</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Protocol</label>
+                <select id="setting-protocol" class="form-select">
+                  <option value="wireguard">WireGuard</option>
+                </select>
+              </div>
+              <button id="save-settings-btn" class="btn btn-primary">Save Settings</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header"><h3>Account</h3></div>
+            <div class="card-body">
+              <div class="setting-row">
+                <div class="setting-info">
+                  <span class="setting-label">Username</span>
+                  <span class="setting-desc" id="setting-username">—</span>
+                </div>
+              </div>
+              <div class="setting-row">
+                <div class="setting-info">
+                  <span class="setting-label">Email</span>
+                  <span class="setting-desc" id="setting-email">—</span>
+                </div>
+              </div>
+              <div class="setting-row">
+                <div class="setting-info">
+                  <span class="setting-label">Member Since</span>
+                  <span class="setting-desc" id="setting-joined">—</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
